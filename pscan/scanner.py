@@ -15,9 +15,9 @@ HTTPS_PORT      = 443
 PortStatus = namedtuple('PortStatus', ['host', 'port', 'status', 'server'])
 
 
-async def check_network(ip: ipaddress.IPv4Network, ports: List[int]) -> None:
+async def check_network(ip_address: ipaddress.IPv4Network, ports: List[int]) -> None:
     """Checks network for open ports"""
-    tasks = [get_port_statuses(str(host), ports) for host in ip.hosts()]
+    tasks = [get_port_statuses(str(host), ports) for host in ip_address.hosts()]
     await asyncio.gather(*tasks)
 
 
@@ -29,14 +29,6 @@ async def get_port_statuses(host: str, ports: List[int]) -> None:
     for result in results:
         if result.status == OPEN_STATUS:
             show_info(result)
-
-
-def show_info(port_status: PortStatus) -> None:
-    """Prints information about open ports and server"""
-    fields = [port_status.host, port_status.port, port_status.status]
-    if server := port_status.server:
-        fields.append(server)
-    print(*fields, sep='\t')
 
 
 async def try_connect(host: str, port: int) -> PortStatus:
@@ -51,18 +43,28 @@ async def try_connect(host: str, port: int) -> PortStatus:
 
         if port in (HTTP_PORT, HTTPS_PORT):
             server = await check_server_app(to_url(host, port))
-    except:
+    except Exception:
         pass
 
     return PortStatus(host, port, status, server)
 
 
 async def check_server_app(host: str) -> str:
+    """Returns host server application, if known"""
     async with aiohttp.ClientSession() as session:
         async with session.get(host) as response:
             return response.headers["Server"]
 
 
 def to_url(host: str, port: int) -> str:
+    """Generate url from given host and port"""
     protocol = "https" if port == HTTPS_PORT else "http"
     return f'{protocol}://{host}:{port}/'
+
+
+def show_info(port_status: PortStatus) -> None:
+    """Prints information about open ports and server"""
+    fields = [port_status.host, port_status.port, port_status.status]
+    if server := port_status.server:
+        fields.append(server)
+    print(*fields, sep='\t')
