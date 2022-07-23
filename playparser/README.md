@@ -49,6 +49,6 @@ Output:
     "Review_count": "8.62K",
     "Last_update": "Jun 9, 2022"
   },
-  ...
+  // ...
 ]
 ```
