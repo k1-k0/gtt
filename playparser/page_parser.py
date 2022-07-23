@@ -2,7 +2,6 @@ import asyncio
 from collections import namedtuple
 from typing import List
 import json
-from attr import validate
 
 import requests
 from bs4 import BeautifulSoup

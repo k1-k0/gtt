@@ -1,8 +1,6 @@
 import sys
 import asyncio
 
-import time
-
 from utils import parse_args
 from domain_generator import generate_urls
 from url_checker import find_ip_by_url

@@ -1,6 +1,5 @@
 import asyncio
 import sys
-from pprint import pprint
 
 from utils import parse_args
 from page_parser import (
