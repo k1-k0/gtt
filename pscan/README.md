@@ -2,7 +2,8 @@
 
 ## Example of work:
 
-Launch script:
+Launch script via command:
+
 `$ python main.py 34.120.195.0/24 21 22 80 443`
 
 Output:

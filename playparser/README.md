@@ -2,7 +2,8 @@
 
 ## Example of work:
 
-Launch script:
+Launch script via command:
+
 `$ python main.py frog`
 
 Output:
