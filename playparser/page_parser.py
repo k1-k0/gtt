@@ -55,7 +55,7 @@ def convert_applications_info_to_json(apps_info: List[ApplicationInfo]):
     if len(container) == 1:
         return json.dumps(container[0], ensure_ascii=False)
 
-    return json.dumps(obj, ensure_ascii=False)
+    return json.dumps(container, ensure_ascii=False)
 
 def get_application_links(name: str):
     """Get list of links to similar applications"""

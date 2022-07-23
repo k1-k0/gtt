@@ -3,18 +3,52 @@
 ## Example of work:
 
 Launch script:
-`$ python main.py bank`
+`$ python main.py frog`
 
 Output:
+
 ```json
-{
-  "Name": "Dave - Banking & Cash Advance",
-  "URL": "https://play.google.com/store/apps/details?id=com.dave",
-  "Author": "Dave, Inc",
-  "Category": null,
-  "Description": "Get up to $500 instantly (1) with ExtraCash™ from Dave. There’s no interest, credit check, or late fees...and you can build credit when you settle an advance on time! With a Dave Spending account, you can also get your paychecks up to two days earlier (3). Earn cash back with Dave Rewards, save money with Dave Goals, and ​​if you want to make more money, Dave can help there too! With Side Hustle, you can easily find and apply for side jobs and get that cash.Join millions of people building a better financial future with Dave!ADVANCE UP TO $500 INSTANTLY (1)Dave’s ExtraCash™ can now get you more funds than ever—up to $500! (1) That’s more money to fill your tank, tackle your to-do list, or take advantage of a now-or-never opportunity. For more information, please visit dave.com/extra-cash-accountSPEND IT INSTANTLY (1)The money is yours to spend right away with your Dave Debit Mastercard®. Unlike other apps, there’s no waiting period or lengthy application process—which means no more missing out because of a low balance.PAY BACK ADVANCES AND BUILD CREDITYou can build credit whenever you settle an ExtraCash™ advance on time thanks to our new Credit Builder feature. And for a limited time, Credit Builder's on us for your first 3 months. (2)ENJOY EARLY PAYDAYS (3)Get paid up to two days early when you set up direct deposit into a Dave Spending account!EARN CASH BACK WITH DAVE REWARDSUse the Dave Debit Mastercard®—now loaded with cashback offers from major retailers.SAVE WITH GOALSPut cash toward anything you’re saving for—a trip, emergency fund, student loans, and more.FIND A SIDE HUSTLEIf you want to earn more money, Dave can help! Apply for side jobs that fit your lifestyle. Membership is $1 per month to access our account monitoring, notification services, budgeting and to maintain a connection to your external bank account. (1) The ExtraCash™ account is a part of Dave’s pilot program and is open to new members only subject to availability. ExtraCash™ is a DDA account with overdraft utility that is subject to eligibility requirements. Taking an ExtraCash™ advance will make your account balance negative. Express delivery fees apply to instant transfers. See dave.com/extra-cash for details.(2) After your first 3 months, there will be a fee of $4.99 a month. Fee is subject to change. You can unenroll any time. Terms apply, see dave.com/extra-cash for more details. (3) Early Payday: Early access to direct deposit funds depends on the timing and availability of the payroll files sent from your employer. These funds can be made available up to 2 days in advance.No minimum repayment term.Repayment between 3 days and 3 weeks or upon your payday.Zero APR, no APR, no interest rate, zero interest.Example Scenario: If you instantly transfer a $200 ExtraCash™ advance to your Dave Spending Account for a $5.99 express delivery fee and add an optional $10 tip, then your total will be $215.99.dave.com/privacy",
-  "Average_rating": "4.4",
-  "Review_count": "435K",
-  "Last_update": "Jul 18, 2022"
-}
+[
+  {
+    "Name": "Frog",
+    "URL": "https://play.google.com/store/apps/details?id=gr.cosmote.frog",
+    "Author": "COSMOTE GREECE",
+    "Category": "Tools",
+    "Description": "The Frog app is here!Download it to manage your account and get unique offers!With Frog app you can:- Check your remaining Data, Minutes, SMS & Balance in order to have the full control of your account.- Easily top up your balance.- Access exclusive app Offers and online top up bonuses.- Browse the Frog unique bundles and activate them in seconds.- Easy access to all Packages and \"Pay as You Go\" tariffs for International & National calls.- Set your Favourite Destinations in order to easily browse packages for the countries you communicate the most!- Immediately check which of your contacts are using Frog.",
+    "Average_rating": "4.6",
+    "Review_count": "6.44K",
+    "Last_update": "Jul 11, 2022"
+  },
+  {
+    "Name": "FROG Water Care",
+    "URL": "https://play.google.com/store/apps/details?id=com.echoinnovateit.frog",
+    "Author": "King Technology",
+    "Category": "Lifestyle",
+    "Description": "FROG® Water Care Mobile ApplicationThe ‘FROG® Water Care Mobile Application’ is the number one choice for pool and hot tub owners using FROG Sanitizing Systems.  The FROG Water Care app will provide expert help with water testing to FROG’s unique chlorine or bromine levels as well as troubleshooting, finding a local dealer, and scheduling reminders for testing your water or replacing your FROG products.  - Supports FROG and FROG @ease test strips- For use only with FROG or FROG @ease test strips- Gives clear step by step recommendations on test strip results- View testing history- Find your local dealer- Provide dosage recommendations- Solve pool problems- Instant and precise advice on correcting any water issues- Set reminders to help you maintain crystal clear and clean water- Helpful testing history to see your progress and prevent future issues- Ability to lock in your FROG dealer for easy replacement purchases- Additional help at your fingertips including videos, manuals, and more.- Direct line to our Customer Service experts for personalized assistanceQuestions? Water Care Tips? Call 1-800-222-0169 or visit frogproducts.comNotice Concerning Use of the FROG® Water Care Mobile Application: The FROG® Water Care mobile application works best with FROG® and FROG @ease brand test strips used according to the instructions provided with the products.  Used accordingly, we believe the information provided may be useful to the consumer.  However, King Technology, Inc., as owner of this mobile application, disclaims any and all representations or warranties as to the merchantability or fitness for any purpose of this mobile application or the information generated by its use.  Use the FROG® Water Care mobile application and the information generated by the application at your own risk, and subject to the Terms of Use and Privacy Policy available at www.kingtechnology.com. If you do not agree to these terms, please do not use our water care testing information and tools. FROG® Water Care Mobile Application © 2018 King Technology, Inc.  All rights reserved. All trademarks and the trade dress associated with any of the foregoing, including this mobile application, are the property of King Technology, Inc.",
+    "Average_rating": "3.5",
+    "Review_count": "259",
+    "Last_update": "Jun 10, 2022"
+  },
+  {
+    "Name": "Frog – More Than Chat",
+    "URL": "https://play.google.com/store/apps/details?id=com.frog.kidsmessenger.student.socialmedia",
+    "Author": "Frog Social Inc.",
+    "Category": null,
+    "Description": "Frog is an instant video messaging app where real friends share stories together. At Frog, there are no filters, no fakes, only real life and feelings. Video Stories are called ‘SUPs’ here on Frog. Like making a sequel to a movie, friends can continue your SUPs by adding Sequel videos. Every good story needs a Sequel! Choose your fun SUPs and friends’ SEQUELs to create a Flashback video with just one click. WYD is an instant button that starts conversation with no stress. Reply to your friend’s ‘WYD’ with video to start a quick chat. Text friends while SUPs are auto-playing in the background. Now, Stories are more interactive than ever. Featuring Q&A stickers, unique Challenges, Party Games - all inside Frog app. ______________We have zero tolerance for inappropriate contents or harassments of any kind. Inappropriate users will be reported to authorities directly. More safety information: frogapp.me/teens-guide",
+    "Average_rating": "4.7",
+    "Review_count": "9.48K",
+    "Last_update": "Jul 12, 2022"
+  },
+  {
+    "Name": "Frog Weather Shortcut",
+    "URL": "https://play.google.com/store/apps/details?id=jp.miyavi.androiod.gnws",
+    "Author": "miyavi",
+    "Category": "Weather",
+    "Description": "* Sometimes, Mr.Frog  take a vacation. In that case, let's wait until him come back :) (Google's server problem)When remap the Bixby button of Galaxy S8 and calling this app, weather can be displayed by simply pressing the Bixby button.I needed this function:)About Bixby remapping*bxActions*https://forum.xda-developers.com/galaxy-s8/themes/app-bxactions-remap-bixby-button-to-t3598253*BixBye*https://forum.xda-developers.com/galaxy-s8/themes/app-bixbye-fast-bixby-button-remapper-t3594343",
+    "Average_rating": "3.4",
+    "Review_count": "8.62K",
+    "Last_update": "Jun 9, 2022"
+  },
+  ...
+]
 ```
