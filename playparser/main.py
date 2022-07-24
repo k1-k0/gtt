@@ -7,7 +7,6 @@ from page_parser import (
     validate_applications, convert_applications_info_to_json)
 
 
-
 async def main():
     keyword = parse_args(sys.argv)
     app_links = get_application_links(name=keyword)

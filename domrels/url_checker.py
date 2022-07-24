@@ -12,5 +12,6 @@ async def find_ip_by_url(url: str):
     except Exception:
         pass
 
+
 def show_info(url, ip_address):
     print(f"{url:>30} - {ip_address:<15}")

@@ -1,24 +1,25 @@
 import asyncio
-import ipaddress
+import ipaddress as ip
 from typing import List, Union
 from collections import namedtuple
 
 import aiohttp
 
 
-OPEN_STATUS     = "OPENED"
-CLOSED_STATUS   = "CLOSED"
+OPEN_STATUS = "OPENED"
+CLOSED_STATUS = "CLOSED"
 DEFAULT_TIMEOUT = 5
-HTTP_PORT       = 80
-HTTPS_PORT      = 443
+HTTP_PORT = 80
+HTTPS_PORT = 443
 
 PortStatus = namedtuple('PortStatus', ['host', 'port', 'status', 'server'])
 
 
-async def check_network(ip_address: Union[ipaddress.IPv4Network, ipaddress.IPv6Network],
+async def check_network(ip_address: Union[ip.IPv4Network, ip.IPv6Network],
                         ports: List[int]) -> None:
     """Checks network for open ports"""
-    tasks = [get_port_statuses(str(host), ports) for host in ip_address.hosts()]
+    hosts = ip_address.hosts()
+    tasks = [get_port_statuses(str(host), ports) for host in hosts]
     await asyncio.gather(*tasks)
 
 
@@ -34,7 +35,8 @@ async def get_port_statuses(host: str, ports: List[int]) -> None:
 
 async def try_connect(host: str, port: int) -> PortStatus:
     """Try to connect to specified host:port.
-        If connection if successful then the port is open, otherwise - closed"""
+       If connection if successful then the port is open,
+       otherwise - closed"""
     status = CLOSED_STATUS
     server = None
     try:

@@ -52,7 +52,9 @@ class Strategy:
         for i, symbol in enumerate(keyword):
             if symbol in HOMOGLYPHS:
                 for homoglyph in HOMOGLYPHS[symbol]:
-                    new_keyword = ''.join((keyword[:i], homoglyph, keyword[i+1:]))
+                    new_keyword = ''.join((keyword[:i],
+                                           homoglyph,
+                                           keyword[i+1:]))
                     result.append(new_keyword)
         return result
 
@@ -73,6 +75,7 @@ class Strategy:
         for i in range(1, len(keyword)+1):
             result.append(''.join((keyword[:i-1], keyword[i:])))
         return result
+
 
 async def generate_urls(keywords: List[str]):
     """Returns list of unique bad urls generated from given keywords"""
