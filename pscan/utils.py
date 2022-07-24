@@ -1,4 +1,4 @@
-from typing import Tuple, List
+from typing import Tuple, List, Union
 import ipaddress
 
 
@@ -6,7 +6,8 @@ class NoPortsForScanException(Exception):
     pass
 
 
-def parse_args(args: List) -> Tuple[ipaddress.IPv4Address, List[int]]:
+def parse_args(args: List) -> Tuple[Union[ipaddress.IPv4Network, ipaddress.IPv6Network],
+                                    List[int]]:
     """Returns arguments converted to the correct type"""
     ip_address = ipaddress.ip_network(args[1])
     ports = convert_ports_to_int(args[2:])

@@ -1,6 +1,6 @@
 import asyncio
 from collections import namedtuple
-from typing import List
+from typing import List, Optional
 import json
 
 import requests
@@ -79,7 +79,7 @@ def get_application_links(name: str):
     return application_links
 
 
-async def parse_application_page(application_link: str) -> ApplicationInfo:
+async def parse_application_page(application_link: str) -> Optional[ApplicationInfo]:
     """Get needed information of application from page"""
     request = requests.get(application_link)
     soup = BeautifulSoup(request.content, "html.parser")
@@ -94,6 +94,7 @@ async def parse_application_page(application_link: str) -> ApplicationInfo:
         get_app_last_update(soup)
     )
 
+    app_info = None
     if results:
         app_info = ApplicationInfo(
             name=results[0],
@@ -109,34 +110,34 @@ async def parse_application_page(application_link: str) -> ApplicationInfo:
     return app_info
 
 
-async def get_app_name(soup: BeautifulSoup) -> str:
+async def get_app_name(soup: BeautifulSoup) -> Optional[str]:
     name = soup.find("h1", class_="Fd93Bb")
     return name.text if name else None
 
-async def get_app_author(soup: BeautifulSoup) -> str:
+async def get_app_author(soup: BeautifulSoup) -> Optional[str]:
     author = soup.find("div", class_="Vbfug auoIOc")
     return author.text if author else None
 
-async def get_app_category(soup: BeautifulSoup) -> str:
+async def get_app_category(soup: BeautifulSoup) -> Optional[str]:
     category = soup.find("div", class_="Uc6QCc")
     if category:
         return category.text if category else None
 
-async def get_app_description(soup: BeautifulSoup) -> str:
+async def get_app_description(soup: BeautifulSoup) -> Optional[str]:
     description = soup.find("div", class_="bARER")
     if description:
         return description.text if description else None
 
-async def get_app_average_rating(soup: BeautifulSoup) -> str:
+async def get_app_average_rating(soup: BeautifulSoup) -> Optional[str]:
     average_rating = soup.find("div", class_="jILTFe")
     return average_rating.text if average_rating else None
 
-async def get_app_review_count(soup: BeautifulSoup) -> str:
+async def get_app_review_count(soup: BeautifulSoup) -> Optional[str]:
     review_count = soup.find("div", class_="EHUI5b")
     if review_count:
         numeric_part = review_count.text.split()[0]
         return numeric_part
 
-async def get_app_last_update(soup: BeautifulSoup) -> str:
+async def get_app_last_update(soup: BeautifulSoup) -> Optional[str]:
     last_update = soup.find("div", class_="xg1aie")
     return last_update.text if last_update else None

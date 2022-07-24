@@ -1,6 +1,6 @@
 import asyncio
 import ipaddress
-from typing import List
+from typing import List, Union
 from collections import namedtuple
 
 import aiohttp
@@ -15,7 +15,8 @@ HTTPS_PORT      = 443
 PortStatus = namedtuple('PortStatus', ['host', 'port', 'status', 'server'])
 
 
-async def check_network(ip_address: ipaddress.IPv4Network, ports: List[int]) -> None:
+async def check_network(ip_address: Union[ipaddress.IPv4Network, ipaddress.IPv6Network],
+                        ports: List[int]) -> None:
     """Checks network for open ports"""
     tasks = [get_port_statuses(str(host), ports) for host in ip_address.hosts()]
     await asyncio.gather(*tasks)
